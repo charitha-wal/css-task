@@ -1,0 +1,63 @@
+.item-enter {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+  .item-enter-done {
+    transition:transform 1000ms ease-out,opacity 1000ms ease-in;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+
+
+.Carousel{
+
+    height:60%;
+    width:60%;
+    // margin:auto ;
+    position: absolute;
+    top:calc((100% - 60%)/2);
+    left:calc((100% - 60%)/2);
+    cursor: pointer;
+
+    .LeftArrow{
+        position: absolute;
+        top:50%;
+        left:25px;
+        color: #FFF;
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    .RightArrow{
+        position: absolute;
+        top:50%;
+        right:25px;
+        color: #FFF;
+        font-size: 40px;
+        font-weight: 400;
+
+    }
+
+    .NavigationBar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        bottom:20px;
+        margin:auto;
+        z-index:100;
+        width:200px;
+
+        .navElement{
+            width:30px;
+            height:5px;
+            background-color:rgba(255,255,255,0.5);
+            border-radius: 2.5px;
+        }
+
+        .active{
+            background-color: rgba(255,255,255,1)
+        }
+    }
+}
