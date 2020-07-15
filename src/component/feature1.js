@@ -6,3 +6,22 @@ function reducer(acc , item) {
 }
 
 let minRods = Math.ceil((input.reduce(reducer , 0))/120);
+
+// 2nd commit feature1
+
+function reduceTheWastage(array) {
+    let con = array
+    let sum = array.reduce((a, b) => a + b, 0)
+    let arr1 = array
+    let c = 1
+    while (sum < 120 && c < min) {
+        array = array.concat(con)
+        sum = array.reduce((a, b) => a + b, 0)
+        if (sum < 120) {
+            arr1 = array
+            c++
+        }
+    }
+    min = Math.floor(min / c)
+    return arr1
+}
